@@ -1,0 +1,173 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat';
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* Containers */
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* Sections */
+.colored-section{
+  background-color: #ffd460;
+  color: #fff;
+}
+.white-section{
+  background-color: #fff;
+}
+
+/* Headings */
+.big-heading {
+  font-family: 'Montserrat';
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+
+/* Navigation Bar */
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+/* Download Buttons */
+.download-button {
+  margin: 3% 5% 3% 0;
+}
+
+/* Title Section */
+#title .container-fluid{
+  padding: 3% 15% 7%;
+    text-align: left;
+}
+
+/* Title Image */
+.title-image {
+  width: 80%;
+  position: absolute;
+  right: 5%;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    margin: auto;
+  }
+}
+
+/* Features Section */
+#features {
+  background-color: #fff;
+  position: relative;
+}
+.feature-title{
+  font-size: 1.5rem;
+}
+.feature-box {
+  padding: 5%;
+}
+
+.icon {
+  color: #ffd460;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #2d4059;
+}
+
+/* Recommendations Section */
+.Recommendations-Heading{
+  font-family: 'Montserrat';
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+/* Premade Plans Section */
+#premadeplans {
+  background-color: #ef8172;
+}
+
+/* Food Images */
+.food-image {
+  width: 100%;
+  height: 700px;
+}
+
+.premadeplan-button {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 500px;
+  left: 0;
+  right: 0;
+}
+
+ /* Carousel */
+.carousel-item h1{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  left: 0;
+  right: 0;
+    padding:5px;
+    font-size:50px;
+    color:#ffffff;
+}
+
+.carousel-item span {
+   background-color: rgba(0,0,0,0.5);
+}
+
+/* Meal Creator Section */
+#mealcreator {
+  padding: 100px;
+}
+
+.custom-select-nutrients{
+  padding: 10;
+  margin-bottom: 1%;
+  text-align-last: center;
+  width: 600px;
+}
+.create-meal-button{
+  padding-left: 10px;
+  margin-left: 5%;
+}
+
+/* Footer */
+.social-icon {
+  margin: 10px 20px;
+}

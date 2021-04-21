@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Munch</title>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/40d8ff8017.js" crossorigin="anonymous"></script>
+
+  <!-- BootStrap Scripts-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="">Munch</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#Recommendations">Recommendations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#premadeplans">Premade Food Plans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cta">Meal Creator</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div class="row">
+
+        <!-- Title  Message-->
+        <div class="col-lg-6">
+          <h1 class="big-heading">Your ultimate meal creator.</h1>
+          <button type="button" class="btn btn-dark download-button"><i class="fab fa-apple"></i> Download</button>
+          <button type="button" class="btn btn-outline-light download-button"><i class="fab fa-google-play"></i> Download</button>
+        </div>
+
+        <!-- Title Image -->
+        <div class="col-lg-6">
+          <img class="title-image" src="images/MealPhotoTitle.jpg" alt="meal-mockup">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Features -->
+  <section class="white-section" id="features">
+    <div class="container-fluid">
+
+      <!-- Recommendation Feature -->
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-check-circle fa-4x"></i>
+          <h3 class="feature-title">Recommendations</h3>
+          <p>Find out how best to eat each food.</p>
+        </div>
+
+        <!-- Premade Food Plan Feature -->
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-utensils fa-4x"></i>
+          <h3 class="feature-title">Premade Food Plans</h3>
+          <p>Explore some premade meal options.</p>
+        </div>
+
+        <!-- Meal Creator Feature -->
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-blender fa-4x"></i>
+          <h3 class="feature-title">Meal Creator</h3>
+          <p>Get custom made meals based on your needs.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Recommendations -->
+  <section class="colored-section" id="Recommendations">
+    <div class="container-fluid">
+
+      <h3 class="Recommendations-Heading">How should you eat this food?</h3>
+
+      <!-- Recommendation Selector -->
+      <select class="custom-select" id="dropdown">
+        <option value="Apple Pie">Apple Pie</option>
+        <option value="Apple Slices">Apple Slices</option>
+        <option value="Bread Sticks">Bread Sticks</option>
+        <option value="Butter Chicken">Butter Chicken</option>
+        <option value="Cake">Cake</option>
+        <option value="Ceaser Salad">Ceaser Salad</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="CremeBrulee">Creme Brulee</option>
+        <option value="Daal">Daal</option>
+        <option value="Fried Pickles">Fried Pickles</option>
+        <option value="Fries">Fries</option>
+        <option value="Lasagna">Lasagna</option>
+        <option value="Garlic Bread">Garlic Bread</option>
+        <option value="Ice Cream">Ice Cream</option>
+        <option value="Macaroons">Macaroons</option>
+        <option value="Onion Rings">Onion Rings</option>
+        <option value="Pizza">Pizza</option>
+        <option value="Salmon">Salmon</option>
+        <option value="Steak">Steak</option>
+        <option value="Sushi">Sushi</option>
+
+      </select>
+
+      <!-- Recommendation Button -->
+      <button id="reco-button" class="download-button btn btn-lg btn-dark" onclick="RecommendationSetter()" type="button">Find out!</button>
+
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">Modal Title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-inner-text">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Food Plans Carousel -->
+  <section class="colored-section " id="premadeplans">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <div class="carousel-inner">
+
+        <!-- Apple Pie Special -->
+        <div class="carousel-item active">
+          <div class="">
+            <button id="premade-plan-button" class="download-button btn btn-lg btn-dark premadeplan-button" type="button" onclick="MealCreator(appleSlices,fruitSalad,applePie,'Apple Pie Special')">Click for meal plan!</button>
+            <h1><span>Apple Pie Special</span></h1>
+            <img class="food-image" src="images/Apple-Pie-Meal.jpg" alt=" First slide">
+          </div>
+        </div>
+
+        <!-- Kabab Delicacy -->
+        <div class="carousel-item">
+          <button id="premade-plan-button" class="download-button btn btn-lg btn-dark premadeplan-button" type="button" onclick="MealCreator(onionRings,kabab,chocolate,'Kabab Delicacy')">Click for meal plan!</button>
+          <h1><span>Kabab Delicacy</span></h1>
+          <img class="food-image" src="images/Paleo-Meal.jpg" alt="Second slide">
+        </div>
+
+        <!-- The Ultimate Burger Meal -->
+        <div class="carousel-item">
+          <button id="premade-plan-button" class="download-button btn btn-lg btn-dark premadeplan-button" type="button" onclick="MealCreator(fries,cheeseBurger,iceCream,'The Ultimate Burger Meal')">Click for meal plan!</button>
+          <h1><span>The Ultimate Burger Meal</span></h1>
+          <img class="food-image" src="images/Burger-Meal.jpg" alt="Third slide">
+        </div>
+      </div>
+
+      <!-- Carousel Buttons -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- Meal Creator -->
+  <section class="white-section" id="mealcreator">
+
+    <h2 class="section-heading">Create your own meal</h2>
+    <p>Select your nutrient requirements to recieve a custom meal plan.</p>
+
+    <!-- Calories Selector -->
+    <select class="custom-select custom-select-nutrients" id="calories">
+      <option value="undefined" selected>Calories (kcal)</option>
+      <option value="500">500</option>
+      <option value="550">550</option>
+      <option value="600">600</option>
+      <option value="650">650</option>
+      <option value="700">700</option>
+      <option value="750">750</option>
+    </select>
+
+    <!-- Protein Selector -->
+    <select class="custom-select custom-select-nutrients" id="protein">
+      <option value="undefined" selected>Protein (grams)</option>
+      <option value="10">10</option>
+      <option value="12.5">12.5</option>
+      <option value="15">15</option>
+      <option value="17.5">17.5</option>
+      <option value="20">20</option>
+      <option value="22.5">22.5</option>
+      <option value="25">25</option>
+    </select>
+
+    <!-- Carbs Selector -->
+    <select class="custom-select custom-select-nutrients" id="carbs">
+      <option value="undefined" selected>Carbohydrates (grams)</option>
+      <option value="60">60</option>
+      <option value="70">70</option>
+      <option value="80">80</option>
+      <option value="90">90</option>
+      <option value="100">100</option>
+    </select>
+
+    <div>
+      <button class="download-button btn btn-lg btn-dark create-meal-button" type="button" onclick="MealPlanner()">Create Meal</button>
+    </div>
+
+  </section>
+
+  <!-- Call to Action -->
+  <section class="colored-section" id="cta">
+    <div class="container-fluid">
+
+      <h3 class="big-heading">Create the Ultimate Meal Today.</h3>
+      <button class="download-button btn btn-lg btn-dark" type="button"><i class="fab fa-apple"></i> Download</button>
+      <button class="download-button btn btn-lg btn-light" type="button"><i class="fab fa-google-play"></i> Download</button>
+
+    </div>
+  </section>
+
+
+  <!-- Javascript -->
+  <script src="index.js" charset="utf-8"></script>
+
+</body>
+
+
+<!-- Footer -->
+<footer class="white-section" id="footer">
+  <div class="container-fluid">
+    <i class="social-icon fab fa-facebook-f"></i>
+    <i class="social-icon fab fa-twitter"></i>
+    <i class="social-icon fab fa-instagram"></i>
+    <i class="social-icon fas fa-envelope"></i>
+    <p>© Copyright 2021 Munch</p>
+  </div>
+
+</footer>
+
+</html>
